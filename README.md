@@ -19,3 +19,4 @@ The pre-pandemic unemployment rate was estimated at 5.2%,
 in March '20 it started to rise to reach its peak in April at the level of 8.8%.
 Then, from month to month, it began to systematically decline.
 From the last available data, in March '21 it stopped at 6.4%
+Data from: https://data.oecd.org/unemp/unemployment-rate.htm#indicator-chart
