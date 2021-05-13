@@ -12,7 +12,7 @@ The climax point has been reached in:
 20-04 - 741
 
 
-In confirmed cases was ... deaths.
+In confirmed cases was 396 deaths.
 
 ### Unemployment rate
 The pre-pandemic unemployment rate was estimated at 5.2%, 
