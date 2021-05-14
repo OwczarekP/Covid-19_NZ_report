@@ -23,6 +23,7 @@ def create_plot(df):
                      hover_name="sub_series_name", size_max=60, template='plotly_white')
     fig.show()
     fig.write_image("../images/arrivals.png",  scale=1, width=1000, height=800)
+    fig.write_html('../images/arrivals.html')
 
 
 def main():
