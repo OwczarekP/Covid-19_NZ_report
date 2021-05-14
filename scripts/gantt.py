@@ -22,12 +22,14 @@ def create_plot(df):
     df['Start'] = df['start']
     df['Finish'] = df['end']
     fig = FF.create_gantt(df, colors=color_dict, index_col='level', show_colorbar=True,
-                          title='Alert levels in 2020-2021 in New Zealand', group_tasks=True)
+                          title='Alert levels in 2020-2021 in New Zealand', group_tasks=True,
+                          bar_width=0.5)
+    fig.layout.xaxis.tickformat = '%d-%m'
     fig.update_yaxes(autorange="reversed")
 
 
     fig.show()
-    fig.write_image("../images/gantt.png",  scale=1, width=1000, height=800)
+    fig.write_image("../images/gantt.png",  scale=1, width=1000, height=500)
     fig.write_html('../images/gantt.html')
 
 
