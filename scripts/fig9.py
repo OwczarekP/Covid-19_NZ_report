@@ -3,13 +3,29 @@ import plotly.graph_objects as go
 import plotly.express as px
 import pandas as pd
 
+
 def load_csv(path):
+    """load_csv
+    This function load the file from the path and save it as dataframe
+    Additionaly its create new column which is subtract of two other columns
+
+    :param path: string to the csv file
+    :return: df: the dataframe from the csv
+    """
     df = pd.read_csv(path)
     df['not_vaccinated']= df['total_population'].tolist() - df['total_vaccination']
     return df[['country', 'total_vaccination', 'not_vaccinated']]
 
+
 def create_plot(df):
-    # Create subplots, using 'domain' type for pie charts
+    """create_plot
+    This function create the pie chart, showing the number of vaccinated and not-vaccinated people
+    in selected countries
+    Then its save this plot as png file and html file
+
+    :param df: the dataframe to the Naw Zealand data
+    :return: None
+    """
     countries = df['country'].unique()
     labels = ['not vaccinated', 'vaccinated']
 
