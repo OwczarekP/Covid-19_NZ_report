@@ -20,10 +20,15 @@ def create_plot(df):
     for country in countries:
         temp = df.loc[df['country'] == country]
         fig.add_trace(go.Pie(labels=labels, values=[temp.iloc[0]['not_vaccinated'], temp.iloc[0]['total_vaccination']],
-                             name=country, marker_colors=px.colors.qualitative.Bold), row=1, col=i)
+                             name=country, marker_colors=px.colors.qualitative.Antique), row=1, col=i)
         i += 1
 
+    for j in fig['layout']['annotations']:
+        j['font'] = dict(size=25,)
+
     fig.update_layout(title_text='Covid-19 vaccination ratio')
+    fig.update_layout(title_font_size=30)
+    fig.update_traces(hoverinfo='label+percent', textinfo='value', textfont_size=25)
     # plot(fig)
     fig.show()
     fig.write_image("../images/fig7.png",  scale=1, width=1000, height=600)
