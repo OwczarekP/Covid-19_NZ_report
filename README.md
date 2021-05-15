@@ -17,7 +17,7 @@ In June 2020 New Zealand's governments announce the country covid-free. While it
 ### Conclusion
 In this report, we focused on analyzing the COVID-19 pandemic in New Zealand. As we showed, even though the pandemic was quite quickly got under control it still impacted the economy of the country. Most of the cases were presented in young people, which can result in very few death cases and much more recovered. The number of total cases was small enough even compared to countries in similar density or climate region. New Zealand government introduced the alert level system to control the lockdown system and they responded accordingly to the number of new cases. As we can see New Zealand didn't slow down the vaccination even after having minimalizing their new cases.
 
-#### Sources
+### Sources
 
 Covid data for different countries: [Our World in Data](https://ourworldindata.org/coronavirus/country/new-zealand)
 Covid data for New Zealand and covid-related area: [Covid-19 data portal](https://www.stats.govt.nz/experimental/covid-19-data-portal)
@@ -26,7 +26,7 @@ Unemployment rate: [OECD](https://data.oecd.org/unemp/unemployment-rate.htm#indi
 World population: [Worldometers](https://www.worldometers.info/world-population/population-by-country/)
 Deaths, recovered and all cases: [Flevy](https://flevy.com/coronavirus/new-zealand)
 
-##### Authors
+#### Authors
 - Paulina Duda
 - Patrycja Owczarek
 
