@@ -21,17 +21,17 @@ In this report, we focused on analyzing the COVID-19 pandemic in New Zealand. As
 
 #### Sources
 
-Covid data for different countries: [Our World in Data]https://ourworldindata.org/coronavirus/country/new-zealand
+Covid data for different countries: [Our World in Data](https://ourworldindata.org/coronavirus/country/new-zealand)
 
-Covid data for New Zealand and covid-related area: [Covid-19 data portal]https://www.stats.govt.nz/experimental/covid-19-data-portal
+Covid data for New Zealand and covid-related area: [Covid-19 data portal](https://www.stats.govt.nz/experimental/covid-19-data-portal)
 
-Alert levels and New Zealand calendar: [History of the COVID-19 Alert System]https://covid19.govt.nz/alert-system/history-of-the-covid-19-alert-system/
+Alert levels and New Zealand calendar: [History of the COVID-19 Alert System](https://covid19.govt.nz/alert-system/history-of-the-covid-19-alert-system/)
 
-Unemployment rate: [OECD]https://data.oecd.org/unemp/unemployment-rate.htm#indicator-chart
+Unemployment rate: [OECD](https://data.oecd.org/unemp/unemployment-rate.htm#indicator-chart)
 
-World population: [Worldometers]https://www.worldometers.info/world-population/population-by-country/
+World population: [Worldometers](https://www.worldometers.info/world-population/population-by-country/)
 
-Deaths, recovered and all cases: [Flevy]https://flevy.com/coronavirus/new-zealand
+Deaths, recovered and all cases: [Flevy](https://flevy.com/coronavirus/new-zealand)
 
 ##### Authors
 - Paulina Duda
