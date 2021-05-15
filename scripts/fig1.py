@@ -37,10 +37,11 @@ def create_plot(df):
     """
     fig = px.line(df, x="date", y=df.columns,
                   hover_data={"date": "|%B %d, %Y"},
-                  title='Total COVID-19 cases', template='plotly_white')
+                  title='Total COVID-19 cases', template='plotly_white',)
     fig.add_vrect(x0="2020-03-25", x1="2020-05-13",
                   annotation_text="alert level 4", annotation_position="top left",
                   fillcolor="red", opacity=0.15, line_width=0)
+    fig.update_traces(line=dict(width=3.5))
     fig.update_xaxes(
         dtick="M1",
         tickformat="%b\n%Y",
