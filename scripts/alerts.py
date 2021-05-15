@@ -44,3 +44,7 @@ def Influence_alerts_cases(df):
 linear_regression(alert_array, casses_array)
 Influence_alerts_cases(df)
 
+# statistics to make table
+df_alert = df[["Alert_level", "Date"]]
+values_alerts = df_alert.value_counts()
+count_a = df["Alert_level"].value_counts()
