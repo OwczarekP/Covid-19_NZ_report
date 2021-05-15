@@ -1,47 +1,59 @@
+#!/usr/bin/env python
 
-import pandas as pd
-import seaborn as sns
 import matplotlib.pyplot as plt
+import pandas as pd
+from sklearn import linear_model
+import numpy as np
+import seaborn as sns
 
 
 def load_csv(path):
     """load_csv
     This function load the file from the path and save it as dataframe
+    Then, it convert the cases and alert level to the array format
 
     :param path: string to the csv file
-    :return: df: the dataframe from the csv
+    :return: alert_array: array with the alert level number
+            cases_array: array with new day cases
     """
     df = pd.read_csv(path)
-    return df
+    df["Date"] = df["Date"].apply(lambda x: x[2:7])
+    cases = np.array(list(df["New_cases"]))
+    alert = np.array(list(df["Alert_level"]))
+
+    cases_array = [[i] for i in cases]
+    alert_array = [[i] for i in alert]
+    return alert_array, cases_array
 
 
-def create_plot(df):
-    """create_plot
-    This function select the countries from the data,
-    Then create the line plot showing the unemployment rate in selected countries
-    Then its save this plot as png file and html file
+def linear_regression(x, y):
+    """linear regression
+    This function create linear regression between alert level and new cases
+    calculating its coefficient
+    and create regression plot
 
-    :param df: the dataframe with unemployment between countries
-    :return: None
+    :param x: the array with the alert level
+    :param y: the array with the daily new cases
+    :return: regression plot, regression coefficient
     """
+    regr = linear_model.LinearRegression()
+    regr.fit(x, y)
+    predictor_y = regr.predict(x)
+    # plot output
+    sns.set(font_scale=1.1)
     sns.set_style("whitegrid")
-    fig, ax = plt.subplots(figsize=(11, 8))
-    ax = sns.lineplot(data=df, x="date", y="Poland", color="red", linewidth=4)
-    ax = sns.lineplot(data=df, x="date", y="Norway", color="tab:orange", linewidth=4)
-    ax = sns.lineplot(data=df, x="date", y="Australia", color="green", linewidth=4)
-    ax = sns.lineplot(data=df, x="date", y="European Union average", color="m", linewidth=4)
-    ax = sns.lineplot(data=df, x="date", y="New Zeland", color="blue", linewidth=4)
-    plt.axvline(3, linewidth=4, color="k")
-    ax.set(xlabel="date", ylabel="Percentage of unemployment [%]")
-    plt.title("Percentage of unemployment during the pandemic", y=1, x=0.5, fontsize=18)
-    plt.xticks(rotation=30)
-    plt.legend(['POL', 'NOW', 'AUS', 'EU', 'NZL'], bbox_to_anchor=(1, 1), prop={'size': 12})
-    return plt.savefig("../images/fig12"), plt.close()
+    fig, ax = plt.subplots(figsize=(8, 6))
+    plt.scatter(x, y, color='black')
+    plt.plot(x, predictor_y, color='blue', linewidth=3)
+    plt.xlabel("Alert")
+    plt.ylabel("Number of daily cases")
+    plt.title(f"Influence of new cases on New Zealand COVID-19 alert level", y=1, x=0.5, fontsize=13)
+    return plt.savefig("../images/fig12.png"), print('Coefficients: \n', regr.coef_)
 
 
 def main():
-    df = load_csv('../data/unemployment.csv')
-    create_plot(df)
+    alert_array, cases_array = load_csv("../data/alert_cases.csv")
+    linear_regression(alert_array, cases_array)
 
 
 if __name__=='__main__':
