@@ -6,6 +6,7 @@ Population of New Zealand is 4,917 mln. From 20-02 to 21-05 was confirmed cases 
 The climax point has been reached in:
 - 20-03 - 743
 - 20-04 - 741
+
 The percentage of cases of people suffering from covid is 0.05%.
 In confirmed cases was 396 deaths. Mortality of infected people is 0.01%.
 
