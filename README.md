@@ -1,7 +1,7 @@
 # Covid-19_NZ_report
 Covid-19 New Zealand Report
 
-### introduction
+### Introduction
 Population of New Zealand is 4,917 mln. From 20-02 to 21-05 was confirmed cases 2643. 
 The climax point has been reached in:
 - 20-03 - 743
