@@ -45,8 +45,7 @@ def create_plot(df):
     fig.update_layout(title_text='Covid-19 vaccination ratio')
     fig.update_layout(title_font_size=30)
     fig.update_traces(hoverinfo='label+percent', textinfo='value', textfont_size=20)
-    # plot(fig)
-    fig.show()
+
     fig.write_image("../images/fig9.png",  scale=1, width=1000, height=600)
 
 

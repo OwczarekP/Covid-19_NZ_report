@@ -35,9 +35,9 @@ def clean_data_vacc(df):
     :param df: the data about vaccination in New Zealand
     :return: df: the data about date and daily vaccination in New Zealand
     """
-    df = df.loc[df['indicator_name'] == 'Covid-19 Vaccines Administered – Daily total']
     df['date'] = df['parameter']
     df['daily_vaccination'] = df['value']
+    df = df.loc[df['indicator_name'] == 'Covid-19 Vaccines Administered – Daily total']
     df = df[['date', 'daily_vaccination']]
     return df
 

@@ -1,3 +1,5 @@
+#!/usr/bin/env python
+
 import pandas as pd
 import seaborn as sns
 import matplotlib.pyplot as plt
@@ -12,23 +14,24 @@ def load_csv(path):
     """
     df = pd.read_csv(path)
     df['Report Date'] = df['Report Date'].apply(lambda x: x[2:7])
+    df_reverse = df.iloc[::-1]
     return df
 
 
 def create_plot(df):
     """create_plot
-    This function create the bar plot, showing number of confirmed cases vs reported day
-    Then its save this plot as png file
+    This function create the bar plot, showing total covid-19 cases by age
 
     :param df: the dataframe to the Naw Zealand data
-    :return: png plot in .../images/fig3 png
+    :return: bar plot
     """
+    # Number of confirmed cases vs age
+    sns.set(font_scale=1.1)
     sns.set_style("whitegrid")
-    df_reverse = df.iloc[::-1]
-    ax = sns.displot(df_reverse, x="Report Date", height=6, aspect=12/6, color="mediumseagreen", edgecolor="darkgreen")
-    ax.set(xlabel="Report Date", ylabel="Number of cases")
-    plt.title("Number of confirmed cases vs reported month", y=0.85, fontsize=16)
-    return plt.savefig("../images/fig3"), plt.close()
+    ax = sns.displot(df, x="Age group", height=6, aspect=10/6, color="cornflowerblue", edgecolor="darkblue")
+    ax.set(xlabel="Age group", ylabel="Number of cases")
+    plt.title("Number of confirmed cases vs age group", y=0.85, x=0.65, fontsize=17)
+    return plt.savefig("../images/fig7"), plt.close()
 
 
 def main():
@@ -38,3 +41,6 @@ def main():
 
 if __name__=='__main__':
     main()
+
+
+

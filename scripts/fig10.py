@@ -10,7 +10,7 @@ def load_csv(path):
     :return: df: the dataframe from the csv
     """
     df = pd.read_csv(path)
-    df['start'] = df.start.str.replace('2021', '2020') #because gannt otherwise put whole 2 years as x axis:
+    df['start'] = df.start.str.replace('2021', '2020') #because gantt otherwise put whole 2 years as x axis:
     df['end'] = df.end.str.replace('2021', '2020')
     return df
 
