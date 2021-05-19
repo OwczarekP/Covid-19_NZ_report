@@ -41,7 +41,7 @@ def get_data(df):
     number_confirmed = df['Case Status'].value_counts()
     
     population_NZL = 4917000
-    deaths = 396
+    deaths = 26
     caes_in_population = round((confirmed_Probable/population_NZL)*100, 2)
     deaths_in_population = round((deaths/population_NZL)*100, 2)
 

@@ -23,7 +23,7 @@ The climax point has been reached in:
 - 20-04 - 741
 
 The percentage of cases of people suffering from covid is 0.05%.
-In confirmed cases was 396 deaths. Mortality of infected people is 0.01%.
+In confirmed cases was 26 deaths. Mortality of infected people is 0.98%.
 
 ### Conclusion
 In this report, we focused on analyzing the COVID-19 pandemic in New Zealand. As we showed, even though the pandemic was quite quickly got under control it still impacted the economy of the country. Most of the cases were presented in young people, which can result in very few death cases and much more recovered. The number of total cases was small enough even compared to countries in similar density or climate region. New Zealand government introduced the alert level system to control the lockdown system and they responded accordingly to the number of new cases. As we can see New Zealand didn't slow down the vaccination even after having minimalizing their new cases.
